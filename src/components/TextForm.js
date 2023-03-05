@@ -58,7 +58,7 @@ export default function TextForm(props) {
             <div className='container' style={{ color: props.mode === 'light' ? 'black' : 'white' }} >
                 <h1>{props.heading}</h1>
 
-                <p>{text.split(" ").filter((element) => { return element.length !== 0 }).length} Words & {text.length} Characters</p>
+                <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} Words & {text.length} Characters</p>
 
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgrounColor: props.mode === 'light' ? 'white' : '#042743' }} id="myBox" rows="8"></textarea>
